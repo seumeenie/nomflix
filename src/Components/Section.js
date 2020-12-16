@@ -33,6 +33,6 @@ Section.propTypes = {
         PropTypes.arrayOf(PropTypes.node),
         PropTypes.node
     ])
-}
+};
 
 export default Section;

@@ -25,6 +25,7 @@ export default class extends React.Component{
                 upcoming,
                 popular
             });
+            console.log(nowPlaying);
         } catch {
             this.setState({
                 error: "Can't find Movie info."
@@ -33,11 +34,13 @@ export default class extends React.Component{
             this.setState({
                 loading: false
             });
+            console.log("aaa");
         }
     }
 
     render() {
         const { nowPlaying, upcoming, popular, error, loading } = this.state;
+        console.log("aaa");
         console.log(this.state);
         return (
             <HomePresenter

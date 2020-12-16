@@ -1,5 +1,5 @@
 /* eslint-disable import/no-anonymous-default-export */
-import { moviesApi, tvApi } from "api";
+import { moviesApi, tvApi } from "../../api";
 import React from "react";
 import DetailPresenter from "./DetailPresenter";
 
@@ -10,7 +10,7 @@ export default class extends React.Component{
         this.state = {
             result: null,
             error: null,
-            loding: true,
+            loading: true,
             isMovie: pathname.includes("/movie/")
         };
 
@@ -24,7 +24,7 @@ export default class extends React.Component{
              history: { push }
             } = this.props;
             const { isMovie } = this.state;
-            const parsedId = parsedInt(id);
+            const parsedId = parseInt(id);
             if(isNaN(parsedId)){
                 return push("/");
             }
@@ -44,11 +44,11 @@ export default class extends React.Component{
 
     render() {
         const { result, error, loading } = this.state;
-        return
+        return (
             <DetailPresenter
                 result={result}
                 error={error}
                 loading={loading}
-            />;
+            />);
     }
 }
