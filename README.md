@@ -1,4 +1,24 @@
-Movie app clone Project
+# Nomflix
+
+Movie Discovery App clone project(React,ES6)
+
+## Screens
+
+-Home
+-TV Shows
+-Search
+-Detail
+
+## API Verbs
+
+-Now playing(Movie)
+-Upcoming(Movie)
+-Top Rated(TV)
+-Popular(TV)
+-Airing Today(TV)
+-TV Show Detail
+-Movie Detail
+-Search(Movie,TV)
 
 -memo-
 Structuring : 적은 코드를 사용해서 간소화시킴(아래 예시 : 이름 저장)

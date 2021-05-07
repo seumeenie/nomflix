@@ -1,6 +1,9 @@
+/**
+ * 해당 사이트의 폰트를 설정. Global -> 모든 페이지에 적용
+ */
 import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
-
+//어떤 컴포넌트들에 스타일을 넣지 않고 Global한 웹사이트(전체)에 스타일을 넣어줌 -> Default 스타일을 추가
 const globalStyles = createGlobalStyle`
     ${reset};
     a{
