@@ -11,11 +11,12 @@ export default class extends React.Component{
         loading: true,
         error: null
     };
-
+    //데이터 불러오기 완료를 위한 async,await 처리
     async componentDidMount() {
+        //try,catch,finally
         try {
           const {
-            data: { results: topRated }
+            data: { results: topRated } //변수명을 변경 //객체 비구조화 할당
           } = await tvApi.topRated();
           const {
             data: { results: popular }
@@ -34,6 +35,7 @@ export default class extends React.Component{
       }
 
     render() {
+        //객체 비구조화 할당(object destructing)
         const { topRated, popular, airingToday, loading, error } = this.state;
         return (
             <TVPresenter 

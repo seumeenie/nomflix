@@ -21,7 +21,8 @@ const Input = styled.input`
   font-size: 28px;
   width: 100%;
 `;
-
+//
+//폼을 만들고 onSubmit 호출 = handleSubmit 호출하기 위함
 const SearchPresenter = ({
     movieResults, 
     tvResults, 

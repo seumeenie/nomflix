@@ -15,6 +15,7 @@ import Detail from "Routes/Detail";
  //두개 이상을 Render하려면 Switch를 사용해 "한번에 오직 하나의 Route만 Render"하게 해줌(Router안에 Route와 Redirect를 번갈아 쓸 수 있게 해줌)
  //Redirect : 일치하는 Route가 하나도 없다면 어느 페이지든 받아서 to에 쓴 대로 보내줌. 여기선 이상한 url로 갈 시 home으로 Redirect시켜줌
  //exact : 해당 path와 정확히 일치할 때만 해당 컴포넌트로 render됌
+ //default로 Router는 모든 Route들에게 props(정보)를 줌(react-router-dom을 임포트 했기 때문)
 export default () => (
   <Router>
     <>

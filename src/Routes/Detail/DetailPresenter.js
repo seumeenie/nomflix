@@ -1,3 +1,7 @@
+/**
+ * React Component Coding Pattern : Container-Presenter Pattern (Presenter) = data를 보여주는 역할. state(상태값)을 가지고 있지 않고, 클래스도 없는 그냥 함수형 컴포넌트
+ * 요약 : Presenter = 스타일 
+ */
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";

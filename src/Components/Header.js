@@ -1,5 +1,5 @@
 /**
- * 상단부를 구성해주는 header
+ * 라우터의 위치를 알고 알려주는 header component
  */
 import React from "react";
 // Link : 해당 페이지가 내 application에 있으면 javascript 방식으로 가게 해줌
