@@ -22,10 +22,10 @@ export default class extends React.Component{
           this.searchByTerm(); //데이터 불러옴
         }
     };
-    
+    //event라 칭한 인자값(입력값)을 받고 value로 선언되어 value가 상태값을 업데이트
     updateTerm = event => {
       const {
-        target: { value }
+        target: { value } //value : 입력값
       } = event;
       this.setState({
         searchTerm: value

@@ -20,7 +20,7 @@ const HomePresenter = ({ nowPlaying, popular, upcoming, loading, error }) => (
     <Helmet>
       <title>Movies | Nomflix</title>
     </Helmet>
-    {loading ? (
+    {loading ? ( // 디자인 시 두 개의 stage로 loading과 load를 확인해야함 
       <Loader />
     ) : (
       <Container>
@@ -29,14 +29,14 @@ const HomePresenter = ({ nowPlaying, popular, upcoming, loading, error }) => (
         </Helmet>
         {nowPlaying && nowPlaying.length > 0 && (
           <Section title="Now Playing">
-            {nowPlaying.map(movie => (
+            {nowPlaying.map(movie => ( //Section.js에서의 children(grid)부분
               <Poster
                 key={movie.id}
                 id={movie.id}
                 imageUrl={movie.poster_path}
                 title={movie.original_title}
                 rating={movie.vote_average}
-                year={movie.release_date.substring(0, 4)}
+                year={movie.release_date.substring(0, 4)} //substring : string을 자르는 기능. 필요한 정보만 잘라서 씀
                 isMovie={true}
               />
             ))}
@@ -44,7 +44,7 @@ const HomePresenter = ({ nowPlaying, popular, upcoming, loading, error }) => (
         )}
         {upcoming && upcoming.length > 0 && (
           <Section title="Upcoming Movies">
-            {upcoming.map(movie => (
+            {upcoming.map(movie => ( //children을 여기에 넣은 이유 : Section에서 div 내부에 원하는 children을 넣을 수 있어야 하기 때문
               <Poster
                 key={movie.id}
                 id={movie.id}

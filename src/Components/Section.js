@@ -1,7 +1,10 @@
+/**
+ * Section : 무언가 안에 관련 컨텐츠들을 나열해주는 js file (예: Upcoming Movies Section 안에 관련 영화들)
+ */
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-
+//마지막 children에게 margin-bottom을 주고 싶지 않을 때 :not(:last-child) {}
 const Container = styled.div`
     :not(:last-child) {
     margin-bottom: 50px;

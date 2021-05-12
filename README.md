@@ -2,6 +2,8 @@
 
 Movie Discovery App clone project(React,ES6)
 
+https://sueminlee.github.io/nomflix/
+
 ## Screens
 
 -Home

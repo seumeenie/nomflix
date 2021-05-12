@@ -76,5 +76,5 @@ TVPresenter.propTypes = {
     loading:PropTypes.bool.isRequired,
     error:PropTypes.string
 };
-
+//export 필수
 export default TVPresenter;

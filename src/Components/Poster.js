@@ -1,3 +1,6 @@
+/**
+ * Poster.js : grid로 보여지는 영화나 TV쇼 각각의 이미지와 정보들을 보여주고 꾸며주는 컴포넌트
+ */
 import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
@@ -55,7 +58,7 @@ const Poster = ({ id, imageUrl, title, rating, year, isMovie = false }) => (
           bgUrl={
             imageUrl
               ? `https://image.tmdb.org/t/p/w300${imageUrl}`
-              : require("../assets/noPosterSmall.png")
+              : require("../assets/noPosterSmall.png").default //이미지가 없으면 assets에 저장한 이미지로 보여주기
           }
         />
         
@@ -66,7 +69,7 @@ const Poster = ({ id, imageUrl, title, rating, year, isMovie = false }) => (
           {rating}/10
         </Rating>
       </ImageContainer>
-      <Title>
+      <Title> 
         {title.length > 18 ? `${title.substring(0, 18)}...` : title}
       </Title>
       <Year>{year}</Year>
@@ -75,7 +78,7 @@ const Poster = ({ id, imageUrl, title, rating, year, isMovie = false }) => (
 );
 
 Poster.propTypes = {
-  id: PropTypes.number.isRequired,
+  id: PropTypes.number.isRequired, // user에게 / or /ID proptypes를 보내야 함
   imageUrl: PropTypes.string,
   title: PropTypes.string.isRequired,
   rating: PropTypes.number,

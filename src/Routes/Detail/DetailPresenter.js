@@ -1,11 +1,10 @@
 /**
- * React Component Coding Pattern : Container-Presenter Pattern (Presenter) = data를 보여주는 역할. state(상태값)을 가지고 있지 않고, 클래스도 없는 그냥 함수형 컴포넌트
- * 요약 : Presenter = 스타일 
+ * DetailPresenter.js : 각각의 영화나 TV쇼를 클릭시 세부정보를 보여주는 컴포넌트
  */
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import Helmet from "react-helmet";
+import Helmet from "react-helmet"; // 웹사이트의 head(웹에서 보여지는 페이지의 제목)를 바꿔주는 모듈
 import Loader from "Components/Loader";
 import Message from "Components/Message";
 
@@ -96,7 +95,7 @@ const DetailPresenter = ({ result, loading, error }) => (
           bgImage={
             result.poster_path
               ? `https://image.tmdb.org/t/p/original${result.poster_path}`
-              : require("../../assets/noPosterSmall.png")
+              : require("../../assets/noPosterSmall.png").default
           }
         />
         <Data>
@@ -118,10 +117,10 @@ const DetailPresenter = ({ result, loading, error }) => (
             <Divider>•</Divider>
             <Item>
               {result.genres &&
-                result.genres.map((genre, index) =>
-                  index === result.genres.length - 1
+                result.genres.map((genre, index) => // map function은 index를 줄 수 있어서 현재 항목의 number를 알려줌.
+                  index === result.genres.length - 1 //index는 result.genres.length를 할당
                     ? genre.name
-                    : `${genre.name} / `
+                    : `${genre.name} / `    // 화면 상 /로 끊긴 장르들의 이름
                 )}
             </Item>
           </ItemContainer>

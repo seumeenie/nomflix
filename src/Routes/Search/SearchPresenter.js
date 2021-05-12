@@ -21,7 +21,6 @@ const Input = styled.input`
   font-size: 28px;
   width: 100%;
 `;
-//
 //폼을 만들고 onSubmit 호출 = handleSubmit 호출하기 위함
 const SearchPresenter = ({
     movieResults, 
@@ -39,13 +38,13 @@ const SearchPresenter = ({
       <Form onSubmit={handleSubmit}>
         <Input
           placeholder="Search Movies or TV Shows..."
-          value={searchTerm}
+          value={searchTerm} //value 값을 javascript로부터 얻고 싶어 state에 searchTerm이 존재 -> default로 input(검색 입력 란)에 이 value가 존재(컨테이너로부터 옴)
           onChange={updateTerm}
         />
       </Form>
       {loading ? (
         <Loader />
-      ) : (
+      ) : ( // <> : fragments : 한가지 component만 리턴 가능한 리액트 환경에서 다중 리턴이 가능하게 함
         <>
           {movieResults && movieResults.length > 0 && (
             <Section title="Movie Results">
@@ -81,7 +80,7 @@ const SearchPresenter = ({
           movieResults &&
           tvResults.length === 0 &&
           movieResults.length === 0 && (
-            <Message text="Nothing found" color="#95a5a6" />
+            <Message text={`Nothing found for: ${searchTerm}`} color="#95a5a6" />
           )}
         </>
       )}

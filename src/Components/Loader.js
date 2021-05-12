@@ -1,4 +1,6 @@
-/* eslint-disable import/no-anonymous-default-export */
+/**
+ * Loader : 페이지 이동시 잠시동안 보여지는 부분
+ */
 import React from "react";
 import styled from "styled-components";
 

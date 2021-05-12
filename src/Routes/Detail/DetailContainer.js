@@ -1,6 +1,5 @@
 /**
- * React Component Coding Pattern : Container-Presenter Pattern (Container) = data, state(상태값)을 가지고, api를 불러오고, 로직 처리 역할
- * 요약 : Container = 데이터
+ * DetailContainer.js : 각각의 영화나 TV쇼를 클릭시 세부정보를 불러와 Presenter 넘겨줌
  */
 import { moviesApi, tvApi } from "../../api";
 import React from "react";
@@ -56,6 +55,7 @@ export default class extends React.Component{
 
     render() {
         const { result, error, loading } = this.state;
+        //console.log(result);
         return (
             <DetailPresenter
                 result={result}
